@@ -1,0 +1,134 @@
+.chat-interno-wrapper {
+  display: flex;
+  height: 500px;
+  font-family: sans-serif;
+  background-color: transparent;
+}
+
+.lista-contactos {
+  width: 30%;
+  overflow-y: auto;
+  font-size: 14px;
+  padding: 10px;
+  border-right: 1px solid #e0e0e0;
+}
+
+.lista-contactos h3 {
+  margin: 0 0 10px;
+  font-size: 16px;
+  color: #333;
+}
+
+.contacto {
+  padding: 8px 6px;
+  cursor: pointer;
+  border-bottom: 1px solid #eee;
+}
+
+.contacto:hover,
+.contacto.activo {
+  background-color: #f3f4f6;
+}
+
+.contacto-nombre {
+  font-weight: 600;
+  color: #222;
+}
+
+.contacto-ultimo-mensaje {
+  font-size: 12px;
+  color: #666;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.chat-box {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.chat-header {
+  padding: 6px 0;
+  font-weight: bold;
+  font-size: 16px;
+  color: #222;
+  border-bottom: 1px solid #e0e0e0;
+  margin-bottom: 10px;
+}
+
+.mensajes {
+  flex: 1;
+  padding-right: 5px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.mensaje {
+  max-width: 70%;
+  padding: 8px 12px;
+  font-size: 14px;
+  border-radius: 16px;
+  background-color: #f1f1f1;
+  color: #333;
+}
+
+.mensaje.enviado {
+  align-self: flex-end;
+  background-color: #d1e7dd;
+  color: #222;
+}
+
+.mensaje small {
+  font-size: 11px;
+  display: block;
+  margin-top: 4px;
+  color: #888;
+}
+
+.entrada-mensaje {
+  display: flex;
+  padding-top: 10px;
+  gap: 8px;
+  border-top: 1px solid #e0e0e0;
+}
+
+.entrada-mensaje input {
+  flex: 1;
+  padding: 8px 10px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  color: #222;
+}
+
+.entrada-mensaje input:focus {
+  outline: none;
+  border-color: #999;
+}
+
+.entrada-mensaje button {
+  padding: 8px 14px;
+  background-color: #1c1d1e;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.entrada-mensaje button:disabled {
+  background-color: #ccc;
+  cursor: default;
+}
+
+.chat-placeholder {
+  padding: 20px;
+  text-align: center;
+  color: #999;
+  font-size: 14px;
+}

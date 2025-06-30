@@ -1,0 +1,27 @@
+.mapacalor-container {
+  padding: 20px;
+}
+
+.imagen-mapa-wrapper {
+  position: relative;
+  display: inline-block;
+  margin-top: 20px;
+}
+
+.imagen-mapa {
+  max-width: 100%;
+  height: auto;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+}
+
+.punto-calor {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0.8;
+  cursor: pointer;
+  border: 1px solid #333;
+}

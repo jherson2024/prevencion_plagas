@@ -1,0 +1,31 @@
+.modelo-ia-container {
+  padding: 20px;
+  font-family: sans-serif;
+}
+
+.modelo-lista {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.modelo-card {
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  padding: 15px;
+  width: 250px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.modelo-card:hover,
+.modelo-card.seleccionado {
+  background-color: #f0f8ff;
+  border-color: #0077cc;
+}
+
+.modelo-detalle {
+  margin-top: 20px;
+  border-top: 2px solid #ccc;
+  padding-top: 15px;
+}

@@ -1,0 +1,28 @@
+.resumen-zona-container {
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  max-width: 600px;
+  margin: auto;
+  background: #f9f9f9;
+}
+
+.selector-zona {
+  margin-bottom: 1rem;
+}
+
+.resumen-zona-datos {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+.resumen-zona-datos ul {
+  list-style: none;
+  padding: 0;
+}
+
+.resumen-zona-datos li {
+  margin-bottom: 0.5rem;
+}

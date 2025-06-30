@@ -1,0 +1,26 @@
+.detalle-modelo-ia {
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  padding: 20px;
+  margin-top: 20px;
+  background-color: #f9f9f9;
+}
+
+.detalle-modelo-ia h2 {
+  margin-bottom: 15px;
+  color: #000000;
+}
+
+.detalle-modelo-ia table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.detalle-modelo-ia td {
+  padding: 8px 12px;
+  vertical-align: top;
+}
+
+.detalle-modelo-ia tr:nth-child(even) {
+  background-color: #eef5ff;
+}

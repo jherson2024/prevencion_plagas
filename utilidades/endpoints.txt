@@ -1,0 +1,149 @@
+
+# ==========================================================
+# API - Sistema de Prevención de Plagas Agrícolas
+# Flujo completo: desde login hasta uso total del sistema
+# ==========================================================
+
+# ---------- 1. Autenticación ----------
+POST /auth/login
+# Iniciar sesión y obtener token de acceso.
+# Ejemplo: Laura inicia sesión con su correo y contraseña.
+
+# ---------- 2. Gestión de Usuario y Roles ----------
+POST /usuarios/registrar
+# Registra un nuevo usuario. Laura se registra como nueva productora.
+
+POST /usuarios/{id}/rol
+# Asigna el rol de "Productora" a Laura.
+
+POST /apikeys/generar
+# Genera clave API para Laura con nivel de acceso "Básico".
+
+# ---------- 3. Suscripción ----------
+GET  /planes/listar
+# Consulta los planes disponibles.
+
+POST /suscripciones/crear
+# Laura contrata el plan Profesional el 5 de junio, activo hasta el 5 de julio.
+
+GET  /suscripciones/usuario
+# Verifica su suscripción actual.
+
+# ---------- 4. Subida de Mapa ----------
+GET  /zonas-geograficas/listar
+# Consulta zonas disponibles como “Fundo El Sol”.
+
+POST /mapas-parcela/subir
+# Laura sube un mapa de su parcela el 6 de junio.
+
+GET  /mapas-parcela/usuario
+# Consulta sus mapas subidos.
+
+# ---------- 5. Capas de Mapa ----------
+POST /capas-mapa/generar
+# Genera capa “Plagas junio” con filtros: Tomate, Mosca Blanca, Nivel alto.
+
+GET  /capas-mapa/usuario
+# Consulta capas generadas.
+
+# ---------- 6. Captura de Imagen ----------
+POST /capturas/crear
+# Registra una imagen con nota: “Manchas amarillas en hojas...”
+
+POST /ubicaciones/crear
+# Selecciona punto en el mapa (X: 1350.0, Y: 920.0)
+
+# ---------- 7. Modo Offline ----------
+POST /offline-buffer/guardar
+# Almacena captura local sin conexión.
+
+POST /sync/sincronizar
+# Sincroniza automáticamente cuando vuelve la conexión.
+
+GET  /sync/logs/usuario
+# Muestra logs de sincronización.
+
+# ---------- 8. Diagnóstico Automático ----------
+POST /diagnosticos/procesar
+# IA detecta Mosca Blanca con 78.5% daño, 88.2% confianza.
+
+GET  /diagnosticos/captura/{id}
+# Consulta diagnóstico por captura.
+
+# ---------- 9. Corrección Manual ----------
+POST /etiquetas-manuales/crear
+# Laura corrige plaga a Ácaros con observación.
+
+GET  /etiquetas-manuales/usuario
+# Consulta correcciones que ha realizado.
+
+# ---------- 10. Alertas ----------
+GET  /alertas/usuario
+# Laura recibe alerta: “Alta infestación detectada”.
+
+POST /usuario-alerta/marcar-leida
+# Marca alerta como leída.
+
+# ---------- 11. Recomendaciones ----------
+GET  /recomendaciones/diagnostico/{id}
+# Sugiere: “Azufre mojable y revisión semanal”.
+
+POST /recomendaciones/aplicar
+# Laura aplica la recomendación y deja comentario.
+
+# ---------- 12. Clima ----------
+GET  /clima/zona/{id}
+# Clima registrado: 29°C, 60% humedad, 0.5 mm lluvia.
+
+POST /clima/registrar
+# Registrar datos desde OpenWeatherMap.
+
+# ---------- 13. Predicción ----------
+GET  /predicciones/zona/{id}
+# Se predice reaparición de Ácaros al 20 de junio, 72%.
+
+POST /predicciones/generar
+# Generar predicción nueva.
+
+# ---------- 14. Mapa de Calor y Estadísticas ----------
+GET  /mapa-calor/zona/{id}
+# Se visualiza infestación alta de Ácaros.
+
+GET  /estadisticas/zona/{id}
+# Se muestra promedio de daño del 64.3%.
+
+# ---------- 15. Chat Técnico-Productor ----------
+POST /chat/mensajes/enviar
+# Técnica Martina envía: “¿Puedes enviarme otra foto mañana?”
+
+GET  /chat/mensajes/conversacion/{usuario_id}
+# Laura lee el mensaje.
+
+# ---------- 16. Anotaciones Técnicas ----------
+POST /anotaciones/crear
+# Martina añade: “Refuerzo del tratamiento en 3 días.”
+
+GET  /anotaciones/captura/{id}
+# Consulta anotaciones hechas por técnicos.
+
+# ---------- 17. API Pública ----------
+GET /capturas/usuario
+# Laura consulta su historial usando clave API.
+
+GET /diagnosticos/usuario
+# Consulta diagnósticos previos.
+
+# ---------- 18. Exportación de Informes ----------
+POST /informes/exportar
+# Laura descarga informe para presentar ante el SAG.
+
+GET  /informes/historial
+# Consulta informes exportados previamente.
+
+# ---------- 19. Eventos del Usuario ----------
+POST /eventos/registrar
+# Se registra acción: “Exportación de informe PDF”.
+
+GET  /eventos/usuario
+# Consulta su historial de eventos.
+

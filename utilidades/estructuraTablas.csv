@@ -1,0 +1,33 @@
+Nemotécnico,Nombre,Descripción,Observaciones
+usuario,Usuario,"Representa a los usuarios del sistema: agricultores, técnicos o administradores.","Incluye datos como nombre, correo, contraseña y estado. Relacionado con roles y suscripciones."
+rol,Rol,"Define los roles disponibles en el sistema (ej. técnico, productor, admin).",Relacionada con usuario_rol.
+usuario_rol,Relación Usuario-Rol,Asocia usuarios con sus respectivos roles.,Tabla de relación muchos a muchos entre usuario y rol.
+suscripcion,Suscripción,Gestión de suscripciones de usuarios a planes específicos.,Relacionada con usuario y plan. Permite funcionalidades premium.
+plan,Plan de Suscripción,"Define planes con precio, descripción y beneficios.",Se vincula a suscripciones; puede habilitar análisis avanzados.
+imagen,Imagen,Almacena las imágenes subidas por usuarios de sus cultivos.,Esencial para el diagnóstico. Contiene metadatos como resolución y tamaño.
+mapa_parcela,Mapa de Parcela,Mapa visual correspondiente a la parcela de un usuario.,Base para ubicar manualmente las capturas. Relacionada con zona_geografica e imagen.
+ubicacion,Ubicación Manual,Ubicación elegida manualmente sobre el mapa de parcela.,Vinculada a una imagen del mapa y usada para capturas.
+captura,Captura,Representa una imagen tomada y su ubicación.,"Insumo principal del sistema. Relacionada con usuario, imagen y ubicación."
+cultivo,Cultivo,Lista de cultivos registrados en el sistema.,Usado en diagnóstico y estadísticas.
+plaga,Plaga,Catálogo de plagas posibles a detectar.,"Relacionada con diagnóstico, predicción y recomendaciones."
+diagnostico,Diagnóstico,Resultado de IA aplicado a una captura.,"Incluye plaga, cultivo, daño, confianza y modelo usado."
+modelo,Modelo de IA,Información sobre los modelos entrenados para diagnóstico.,Referencia usada en diagnósticos y predicciones.
+etiqueta_manual,Etiqueta Manual,Correcciones realizadas por un técnico sobre un diagnóstico.,Permite mejorar el sistema supervisado.
+zona_geografica,Zona Geográfica,Región o sector asociado a un usuario o mapa.,Base para mapas de calor y analítica.
+capa_mapa,Capa de Mapa,Capa visual sobre mapas para representar datos.,"Incluye filtros, tipo de visualización. Asociada al usuario."
+mapa_calor_cache,Cache de Mapa de Calor,Datos agregados para visualización rápida del mapa de calor.,"Relacionada con plaga, cultivo, zona y fecha."
+estadistica_agregada,Estadística Agregada,"Datos analíticos por zona, plaga y cultivo.",Base para el dashboard de usuario.
+evento_usuario,Evento de Usuario,Registro de acciones realizadas por los usuarios.,Auditabilidad y trazabilidad de actividad.
+alerta,Alerta,Mensajes generados por patrones peligrosos detectados.,Pueden estar relacionadas con recomendaciones.
+usuario_alerta,Usuario-Alerta,Registra qué usuario recibió qué alerta y su estado de lectura.,Relacionada con usuario y alerta.
+recomendacion,Recomendación,Sugerencia generada según diagnóstico y reglas del sistema.,"Relacionada con plaga, cultivo y nivel de daño."
+recomendacion_aplicada,Recomendación Aplicada,Registra la aplicación de una recomendación por el usuario.,Permite evaluar efectividad y cumplimiento.
+clima,Clima,Registro meteorológico diario por zona.,Base para análisis correlacional y predicción.
+prediccion,Predicción de Plaga,Estimación futura de aparición de plaga.,Basada en datos climáticos y modelos IA.
+tecnico_productor,Relación Técnico-Productor,Asociación entre técnicos y productores para colaboración.,Permite acceso cruzado a imágenes y anotaciones.
+mensaje_chat,Mensaje de Chat,Comunicación entre usuarios dentro de la plataforma.,Apoyo para colaboración entre técnicos y productores.
+anotacion_tecnico,Anotación de Técnico,Comentarios realizados por técnicos sobre una captura.,Complemento a los diagnósticos automáticos.
+api_key,Clave API,Gestión de claves de acceso a la API del sistema.,Control de acceso y permisos para integraciones externas.
+uso_api_log,Log de Uso API,Registro de llamadas realizadas con una clave API.,Monitoreo y seguridad de integraciones.
+datos_offline_buffer,Buffer Offline,Datos capturados sin conexión para sincronizar luego.,Clave para funcionalidad offline del sistema.
+sync_log,Log de Sincronización,Historial de sincronización de datos offline.,Permite trazabilidad de la funcionalidad offline.

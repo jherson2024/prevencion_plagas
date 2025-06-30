@@ -1,0 +1,24 @@
+Nemotécnico A,Entidad A,Nombre Interrelación,Descripción,Nemotécnico B,Entidad B
+usuario,usuario_rol,Rol de usuario,Cada usuario puede tener uno o más roles,rol,usuario_rol
+usuario,suscripcion,Suscripción de usuario,Un usuario puede tener una o más suscripciones,plan,suscripcion
+usuario,captura,Capturas realizadas,El usuario toma imágenes del cultivo,imagen,captura
+usuario,mapa_parcela,Propietario de mapa,Cada usuario puede tener mapas de parcelas,zona_geografica,mapa_parcela
+usuario,capa_mapa,Capas visuales del usuario,El usuario define capas para visualizar datos,,capa_mapa
+usuario,mensaje_chat,Mensajes enviados y recibidos,Usuarios pueden enviarse mensajes,usuario,mensaje_chat
+usuario,tecnico_productor,Relación técnico-productor,Relaciona a técnicos con productores,usuario,tecnico_productor
+usuario,anotacion_tecnico,Anotaciones,Técnicos comentan capturas de productores,captura,anotacion_tecnico
+usuario,usuario_alerta,Alertas recibidas,Usuarios reciben alertas automáticas,alerta,usuario_alerta
+usuario,recomendacion_aplicada,Aplicación de recomendaciones,Usuarios pueden aplicar acciones sugeridas,recomendacion,recomendacion_aplicada
+usuario,api_key,API Key,Usuarios pueden tener claves para la API,,api_key
+usuario,datos_offline_buffer,Datos sin conexión,Usuarios almacenan datos offline,,datos_offline_buffer
+usuario,sync_log,Sincronización offline,Usuarios sincronizan datos cuando hay conexión,,sync_log
+mapa_parcela,ubicacion,Ubicación manual,Ubicación se selecciona sobre el mapa,,ubicacion
+captura,diagnostico,Diagnóstico generado,Diagnóstico automático generado sobre captura,plaga,diagnostico
+captura,anotacion_tecnico,Comentarios técnicos,Técnicos validan o corrigen diagnóstico,usuario,anotacion_tecnico
+plaga,diagnostico,Detección de plaga,Plaga detectada en una captura,cultivo,diagnostico
+plaga,recomendacion,Acción ante plaga,Acción sugerida para una plaga,cultivo,recomendacion
+plaga,mapa_calor_cache,Mapa de infestación,Datos agregados por plaga,zona_geografica,mapa_calor_cache
+plaga,estadistica_agregada,Estadísticas,Estadísticas por plaga y cultivo,zona_geografica,estadistica_agregada
+plaga,prediccion,Predicción futura,IA estima aparición de plaga,zona_geografica,prediccion
+modelo,diagnostico,Modelo usado,Modelo de IA usado para el diagnóstico,,diagnostico
+modelo,prediccion,Modelo predictivo,Modelo usado para predicciones,,prediccion
